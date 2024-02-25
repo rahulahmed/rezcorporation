@@ -1,0 +1,27 @@
+  grafana:
+    container_name: grafana
+    build:
+      context: /home/ubuntu/docker/monitor/sheba_monitoring/grafana
+      dockerfile: Dockerfile
+    ports:
+      - "3007:3007"
+    networks:
+      - docker_network
+    volumes:
+      - /home/ubuntu/docker/monitor/sheba_monitoring/grafana/data:/var/lib/grafana
+      - /home/ubuntu/docker/monitor/sheba_monitoring/grafana/config:/etc/grafana
+   # extra_hosts:
+     # - "dockerhost:${DOCKER_HOST_ADDR}"
+     # - "localhost:${DOCKER_HOST_ADDR}"
+     # - "*.cache.amazonaws.com:172.31.16.110"
+    links:
+      - prometheuse:prometheuse
+      - renderer:renderer
+
+  renderer:
+    container_name: image-renderer
+    image: grafana/grafana-image-renderer:latest
+    networks:
+      - docker_network
+    ports:
+      - "8081:8081"
