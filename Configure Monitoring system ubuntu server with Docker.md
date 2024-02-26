@@ -1,8 +1,8 @@
-#Monitoring solution for Docker hosts and containers with Prometheus, Grafana & Node Express.
-#Prerequisites
+# Monitoring solution for Docker hosts and containers with Prometheus, Grafana & Node Express.
+# Prerequisites
 Make sure that you have Docker and Docker Compose installed:
-Docker Engine
-Docker Compose
+* Docker Engine
+* Docker Compose
 
 To run Prometheus, Grafana, and Node Exporter using Docker, require Docker Compose file which defines the services and their configurations. Using Docker Compose it simplifies the process to run multi-container Docker applications.
 
@@ -80,7 +80,7 @@ Step 7: Access prometheus, nodeexporter and grafana from browser with host name 
 
 
 
-#Connect Grafana with Prometheus:
+# Connect Grafana with Prometheus:
 
 Step 1: Using a web browser, visit port 3000 of the monitoring server. For example, enter http://local_ip_addr:3000, replacing local_ip_addr with the actual IP address. Grafana displays the login page. Use the user name admin and the default password password. Change the password to a more secure value when prompted to do so.
 
@@ -120,7 +120,7 @@ Step 6: If all settings are correct, Grafana confirms the Data source is working
 
 
 
-#Import Grafana Dashboard:
+# Import Grafana Dashboard:
 
 Step 1: Navigate to Grafana dashboard. Select the Dashboard icon and choose “+ Import”.
 
