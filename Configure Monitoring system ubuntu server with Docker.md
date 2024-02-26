@@ -1,4 +1,4 @@
-# Monitoring solution for Docker hosts and containers with Prometheus, Grafana & Node Express.
+# Monitoring solution for Docker host and containers with Prometheus, Grafana & Node Express.
 # Prerequisites
 Make sure that you have Docker and Docker Compose installed:
 * Docker Engine
